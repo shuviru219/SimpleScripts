@@ -12,3 +12,4 @@ def ping(host):
 
     # Pinging
     return system_call("ping " + parameters + " " + host) == 0
+# it will ping both windows and linux
