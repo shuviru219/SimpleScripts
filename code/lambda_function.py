@@ -44,11 +44,11 @@ def lambda_handler(event, context):
         rsrc= response['Events'][j]['Resources'][0]['ResourceName']
         #print rsrc
         msgstr="User "+str(uname) + " Updated Lambda "+ str(rsrc) +" on " + str(eventtime)
-        WEBHOOK_URL="https://hooks.slack.com/services/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"
+        WEBHOOK_URL=""
         payload = {
             'text': msgstr,
-            'channel': "general",
-            'username': "shuvam",
+            'channel': "",
+            'username': "",
             }
         
         r = requests.post(WEBHOOK_URL, json=payload)
